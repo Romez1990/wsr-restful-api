@@ -1,6 +1,5 @@
 <?php
-
-require 'database.php';
+require_once 'database.php';
 
 class auth extends database {
 	public function __construct($url, $get, $post) {
@@ -20,7 +19,7 @@ class auth extends database {
 				('token') => 'Something'
 			);
 			
-			$this->result = json_encode(array(
+			$this->response = json_encode(array(
 				('status code') => $status_code,
 				('status text') => $status_text,
 				('body') => $body
@@ -31,5 +30,5 @@ class auth extends database {
 		}
 	}
 	
-	public $result;
+	public $response;
 }
