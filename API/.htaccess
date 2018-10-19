@@ -1,7 +1,7 @@
-<IfModule mod_rewrite.so>
+<IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /api/api/
+RewriteBase /api/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule (.*) /api/api//index.php?$1 [QSA,L]
+RewriteRule (.*) /api/index.php?$1 [QSA,L]
 </IfModule>
