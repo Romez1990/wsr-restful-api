@@ -43,7 +43,8 @@ class product extends database {
 						
 						// Upload data
 						$now = date('H:i d.m.Y');
-						$result_db = $this->db->query("INSERT INTO `product` (`title`, `manufacturer`, `text`, `tags`, `image`, `date_of_creation`) VALUES ('$title', '$manufacturer', '$text', '$tags', '$upload_path', '$now')");
+						$p = $this->db->real_escape_string($upload_path);
+						$result_db = $this->db->query("INSERT INTO `product` (`title`, `manufacturer`, `text`, `tags`, `image`, `date_of_creation`) VALUES ('$title', '$manufacturer', '$text', '$tags', '$p', '$now')");
 						
 						if ($result_file && $result_db) {
 							// Successful
@@ -89,6 +90,7 @@ class product extends database {
 							// Invalid file format check
 							$valid_size = 2 * pow(2, 20); // 2 MB
 							if ($image['size'] > $valid_size || $image['type'] !== 'image/png' && $image['type'] !== 'image/jpeg') {
+								var_dump($image);
 								$response['status code'] = 400;
 								$response['status text'] = 'Creating error';
 								$response['body']['status'] = false;
@@ -96,29 +98,31 @@ class product extends database {
 							}
 							
 							// Updating
-							// Upload image
-							$r = $this->db->query("SELECT `image` FROM `product` WHERE `id` = '$url[1]'");
-							$d = $r->fetch_assoc()['image'];
-							var_dump($d);
-							unlink($d);
-							$upload_dir = 'W:\domains\1_Module_RESTful_API\API\product_images';
-							$upload_path = $upload_dir . '\\' . $image['name'];
-							$result_file = move_uploaded_file($image['tmp_name'], $upload_path);
-							
-							// Upload data
-							$now = date('H:i d.m.Y');
-							$result_db = $this->db->query("UPDATE `product` SET `title` = '$title', `manufacturer` = '$manufacturer', `text` = '$text', `tags` = '$tags', `image` = '$upload_path' WHERE `id` = '$url[1]'");
-							
-							if ($result_file && $result_db) {
-								$response['status code'] = 201;
-								$response['status text'] = 'Successful editing';
-								$response['body']['status'] = true;
-								$response['body']['post']['title'] = $title;
-								$response['body']['post']['datetime'] = $this->db->query("SELECT `data_of_creation` FROM `product` WHERE `id` = '$url[1]'")->fetch_assoc()['date_of_creation'];
-								$response['body']['post']['■	manufacturer'] = $manufacturer;
-								$response['body']['post']['text'] = $text;
-								$response['body']['post']['tags'] = $tags;
-								$response['body']['post']['image'] = $result_file;
+							if (!$response['status code']) {
+								// Upload image
+								$r = $this->db->query("SELECT `image` FROM `product` WHERE `id` = '$url[1]'");
+								$d = $r->fetch_assoc()['image'];
+								unlink($d);
+								$upload_dir = 'W:\domains\1_Module_RESTful_API\API\product_images';
+								$upload_path = $upload_dir . '\\' . $image['name'];
+								$result_file = move_uploaded_file($image['tmp_name'], $upload_path);
+								
+								// Upload data
+								$now = date('H:i d.m.Y');
+								$p = $this->db->real_escape_string($upload_path);
+								$result_db = $this->db->query("UPDATE `product` SET `title` = '$title', `manufacturer` = '$manufacturer', `text` = '$text', `tags` = '$tags', `image` = '$p' WHERE `id` = '$url[1]'");
+								
+								if ($result_file && $result_db) {
+									$response['status code'] = 201;
+									$response['status text'] = 'Successful editing';
+									$response['body']['status'] = true;
+									$response['body']['post']['title'] = $title;
+									$response['body']['post']['datetime'] = $this->db->query("SELECT `date_of_creation` FROM `product` WHERE `id` = '$url[1]'")->fetch_assoc()['date_of_creation'];
+									$response['body']['post']['manufacturer'] = $manufacturer;
+									$response['body']['post']['text'] = $text;
+									$response['body']['post']['tags'] = $tags;
+									$response['body']['post']['image'] = $result_file;
+								}
 							}
 						}
 						

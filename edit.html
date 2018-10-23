@@ -6,10 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>RESTful API</title>
 	<style>
-		form {
-			width: 300px;
-			display: flex;
-			flex-direction: column;
+		form * {
+			display: block;
+			margin: 20px;
 		}
 	</style>
 </head>
@@ -17,9 +16,6 @@
 
 <form action="API/product/1" method="POST" enctype="multipart/form-data">
 	<input type="text" name="title">
-	<input type="text" name="manufacturer">
-	<textarea name="text" cols="30" rows="10"></textarea>
-	<input type="text" name="tags">
 	<input type="file" name="image"/>
 	<button type="submit">Send</button>
 </form>
