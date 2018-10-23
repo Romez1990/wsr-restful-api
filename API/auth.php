@@ -2,10 +2,10 @@
 require_once 'database.php';
 
 class auth extends database {
-	public function __construct($url, $get, $post) {
+	public function __construct($url) {
 		parent::__construct();
 		
-		if (count($post) > 0) {
+		if (count($_POST) > 0) {
 			// POST
 			$login = $_POST['login'];
 			$password = $_POST['password'];
@@ -23,11 +23,9 @@ class auth extends database {
 			
 			echo json_encode($response);
 			
-		} elseif (count($get) > count($url)) {
+		} elseif (count($_GET) > count($url)) {
 			// GET
 			
 		}
 	}
-	
-	public $response;
 }
