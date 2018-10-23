@@ -7,26 +7,25 @@ class auth extends database {
 		
 		if (count($post) > 0) {
 			// POST
-			$post['login'];
-			$post['password'];
+			$login = $_POST['login'];
+			$password = $_POST['password'];
 			
 			// Authorization...
 			
-			$status_code = 200;
-			$status_text = 'Successful authorization';
-			$body = array(
-				('status') => true,
-				('token') => 'Something'
-			);
+			$token = sha1(time());
 			
-			$this->response = json_encode(array(
-				('status code') => $status_code,
-				('status text') => $status_text,
-				('body') => $body
-			));
+			
+			
+			$response['status_code'] = 200;
+			$response['status_text'] = 'Successful authorization';
+			$response['body']['status'] = true;
+			$response['body']['token'] = $token;
+			
+			echo json_encode($response);
 			
 		} elseif (count($get) > count($url)) {
 			// GET
+			
 		}
 	}
 	
