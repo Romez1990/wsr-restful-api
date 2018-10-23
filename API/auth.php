@@ -7,7 +7,7 @@ class auth extends base_class {
 		
 		$response = null;
 		
-		if ($this->method == 'POST') {
+		if ($this->method === 'POST') {
 			$login = $_POST['login'];
 			$password = $_POST['password'];
 			
