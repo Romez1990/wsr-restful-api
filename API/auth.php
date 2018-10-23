@@ -1,28 +1,38 @@
 <?php
-require_once 'database.php';
+require_once 'base_class.php';
 
-class auth extends database {
+class auth extends base_class {
 	public function __construct($url) {
 		parent::__construct();
 		
-		if (count($_POST) > 0) {
-			// POST
+		$response = null;
+		
+		if ($this->method == 'POST') {
 			$login = $_POST['login'];
 			$password = $_POST['password'];
 			
-			// Authorization...
+			$user = $this->db->query("SELECT `id` FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
 			
-			$token = sha1(time());
+			if ($user->num_rows === 0) {
+				$response['status code'] = 401;
+				$response['status text'] = 'Invalid authorization data';
+				$response['body']['status'] = false;
+				$response['body']['message'] = 'Invalid authorization data';
+			}
 			
-			
-			
-			$response['status_code'] = 200;
-			$response['status_text'] = 'Successful authorization';
-			$response['body']['status'] = true;
-			$response['body']['token'] = $token;
-		} elseif (count($_GET) > count($url)) {
-			// GET
-			
+			// If there is no errors
+			if (!isset($response['status code'])) {
+				$token = sha1(time() . $login . $password);
+				$id_user = $user->fetch_assoc()['id'];
+				$this->db->query("INSERT INTO `session` (`token`, `id_user`) VALUES ('$token', '$id_user')");
+				// id of session
+				// $this->db->insert_id
+				
+				$response['status code'] = 200;
+				$response['status text'] = 'Successful authorization';
+				$response['body']['status'] = true;
+				$response['body']['token'] = $token;
+			}
 		}
 		
 		echo json_encode($response);

@@ -1,14 +1,13 @@
 <?php
-require_once 'database.php';
+require_once 'base_class.php';
 
-class product extends database {
+class product extends base_class {
 	public function __construct($url) {
 		parent::__construct();
 		
 		switch (count($url)) {
 			case 1:
-				if (count($_POST) > 0) {
-					// POST
+				if ($this->method == 'POST') {
 					// Creating
 					$title = $_POST['title'];
 					$manufacturer = $_POST['manufacturer'];
@@ -17,7 +16,7 @@ class product extends database {
 					$image = $_FILES['image'];
 					
 					// Already exists check
-					if ($this->db->query("SELECT COUNT(`title`) AS `count` FROM `product` WHERE `title` = '$title'")->fetch_assoc()['count'] > 0) {
+					if ($this->db->query("SELECT * FROM `product` WHERE `title` = '$title'")->num_rows !== 0) {
 						// Already exists
 						$response['status code'] = 400;
 						$response['status text'] = 'Creating error';
@@ -35,7 +34,7 @@ class product extends database {
 					}
 					
 					// If there is no errors
-					if (!$response['status code']) {
+					if (!isset($response['status code'])) {
 						// Upload image
 						$upload_dir = 'product_images';
 						$upload_path = $upload_dir . '\\' . $image['name'];
@@ -60,6 +59,8 @@ class product extends database {
 					// View
 					
 					$list = $this->db->query("SELECT `title`, `date_of_creation`, `manufacturer`, `text`, `tags`, `image` FROM `product`");
+					
+					$products = null;
 					
 					while ($product = $list->fetch_assoc()) {
 						$products[] = $product;
