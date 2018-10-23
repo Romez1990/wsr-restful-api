@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b12f7723-3268-4847-81b2-861f629d9cfc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/1_Module_RESTful_API.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/43133664-cf1b-425f-a854-09e438de52cf.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/API/database.php" afterPath="$PROJECT_DIR$/API/base_class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/.htaccess" afterPath="$PROJECT_DIR$/API/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/auth.php" afterPath="$PROJECT_DIR$/API/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/index.php" afterPath="$PROJECT_DIR$/API/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/API/product.php" afterPath="$PROJECT_DIR$/API/product.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,11 +69,11 @@
       <file leaf-file-name="auth.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/auth.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+            <state relative-caret-position="432">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <marker date="1540295413229" expanded="true" signature="288:365" ph="SELECT `id` user" />
-                <marker date="1540295413229" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
+                <marker date="1540296782918" expanded="true" signature="288:365" ph="SELECT `id` user" />
+                <marker date="1540296782918" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
               </folding>
             </state>
           </provider>
@@ -94,31 +82,23 @@
       <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+            <state relative-caret-position="288">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding>
-                <marker date="1540295264989" expanded="true" signature="454:502" ph="SELECT COUNT... product" />
-                <marker date="1540295264989" expanded="true" signature="1579:1738" ph="INSERT INTO `product`... " />
-                <marker date="1540295264989" expanded="true" signature="2005:2056" ph="SELECT `id` product" />
-                <marker date="1540295264989" expanded="true" signature="2177:2267" ph="SELECT `titl... product" />
-                <marker date="1540295264989" expanded="true" signature="2857:2924" ph="SELECT COUNT... product" />
-                <marker date="1540295264989" expanded="true" signature="3216:3288" ph="SELECT COUNT... product" />
-                <marker date="1540295264989" expanded="true" signature="4113:4165" ph="SELECT `imag... product" />
-                <marker date="1540295264989" expanded="true" signature="4570:4718" ph="UPDATE `prod... " />
-                <marker date="1540295264989" expanded="true" signature="5038:5101" ph="SELECT `date... product" />
-                <marker date="1540295264989" expanded="true" signature="5493:5606" ph="SELECT `titl... product" />
-                <marker date="1540295264989" expanded="true" signature="5948:6018" ph="SELECT COUNT... product" />
-                <marker date="1540295264989" expanded="true" signature="6378:6499" ph="INSERT INTO `comment`... " />
+                <marker date="1540297351311" expanded="true" signature="477:491" ph="SELECT COUNT... " />
+                <marker date="1540297351311" expanded="true" signature="477:549" ph="SELECT COUNT... product" />
+                <marker date="1540297351311" expanded="true" signature="477:591" ph="SELECT COUNT... product" />
+                <marker date="1540297351311" expanded="true" signature="2182:2359" ph="INSERT INTO `product`... " />
+                <marker date="1540297351311" expanded="true" signature="2774:2864" ph="SELECT `titl... product" />
+                <marker date="1540297351311" expanded="true" signature="3284:3330" ph="SELECT * FRO... product" />
+                <marker date="1540297351311" expanded="true" signature="3804:3876" ph="SELECT COUNT... product" />
+                <marker date="1540297351311" expanded="true" signature="4681:4733" ph="SELECT `imag... product" />
+                <marker date="1540297351311" expanded="true" signature="5146:5312" ph="UPDATE `prod... " />
+                <marker date="1540297351311" expanded="true" signature="5625:5688" ph="SELECT `date... product" />
+                <marker date="1540297351311" expanded="true" signature="6067:6180" ph="SELECT `titl... product" />
+                <marker date="1540297351311" expanded="true" signature="6511:6581" ph="SELECT COUNT... product" />
+                <marker date="1540297351311" expanded="true" signature="6941:7062" ph="INSERT INTO `comment`... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session" pinned="false" current-in-tab="false">
-        <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.session">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -136,9 +116,9 @@
         <option value="$PROJECT_DIR$/API/database.php" />
         <option value="$PROJECT_DIR$/API/index.php" />
         <option value="$PROJECT_DIR$/API/.htaccess" />
-        <option value="$PROJECT_DIR$/API/product.php" />
         <option value="$PROJECT_DIR$/API/base_class.php" />
         <option value="$PROJECT_DIR$/API/auth.php" />
+        <option value="$PROJECT_DIR$/API/product.php" />
       </list>
     </option>
   </component>
@@ -220,12 +200,12 @@
       <updated>1540284052376</updated>
       <workItem from="1540284053783" duration="22000" />
       <workItem from="1540284105295" duration="2784000" />
-      <workItem from="1540289712276" duration="4801000" />
+      <workItem from="1540289712276" duration="6545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7607000" />
+    <option name="totallyTimeSpent" value="9351000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,8 +278,8 @@
         <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1540295413229" expanded="true" signature="288:365" ph="SELECT `id` user" />
-            <marker date="1540295413229" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
+            <marker date="1540296782918" expanded="true" signature="288:365" ph="SELECT `id` user" />
+            <marker date="1540296782918" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
           </folding>
         </state>
       </provider>
@@ -321,13 +301,6 @@
       </provider>
     </entry>
     <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.session">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -358,34 +331,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.session">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="37" column="6" lean-forward="false" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+        <state relative-caret-position="432">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1540295413229" expanded="true" signature="288:365" ph="SELECT `id` user" />
-            <marker date="1540295413229" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
+            <marker date="1540296782918" expanded="true" signature="288:365" ph="SELECT `id` user" />
+            <marker date="1540296782918" expanded="true" signature="801:873" ph="INSERT INTO `session`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        <state relative-caret-position="288">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <marker date="1540295264989" expanded="true" signature="454:502" ph="SELECT COUNT... product" />
-            <marker date="1540295264989" expanded="true" signature="1579:1738" ph="INSERT INTO `product`... " />
-            <marker date="1540295264989" expanded="true" signature="2005:2056" ph="SELECT `id` product" />
-            <marker date="1540295264989" expanded="true" signature="2177:2267" ph="SELECT `titl... product" />
-            <marker date="1540295264989" expanded="true" signature="2857:2924" ph="SELECT COUNT... product" />
-            <marker date="1540295264989" expanded="true" signature="3216:3288" ph="SELECT COUNT... product" />
-            <marker date="1540295264989" expanded="true" signature="4113:4165" ph="SELECT `imag... product" />
-            <marker date="1540295264989" expanded="true" signature="4570:4718" ph="UPDATE `prod... " />
-            <marker date="1540295264989" expanded="true" signature="5038:5101" ph="SELECT `date... product" />
-            <marker date="1540295264989" expanded="true" signature="5493:5606" ph="SELECT `titl... product" />
-            <marker date="1540295264989" expanded="true" signature="5948:6018" ph="SELECT COUNT... product" />
-            <marker date="1540295264989" expanded="true" signature="6378:6499" ph="INSERT INTO `comment`... " />
+            <marker date="1540297351311" expanded="true" signature="477:491" ph="SELECT COUNT... " />
+            <marker date="1540297351311" expanded="true" signature="477:549" ph="SELECT COUNT... product" />
+            <marker date="1540297351311" expanded="true" signature="477:591" ph="SELECT COUNT... product" />
+            <marker date="1540297351311" expanded="true" signature="2182:2359" ph="INSERT INTO `product`... " />
+            <marker date="1540297351311" expanded="true" signature="2774:2864" ph="SELECT `titl... product" />
+            <marker date="1540297351311" expanded="true" signature="3284:3330" ph="SELECT * FRO... product" />
+            <marker date="1540297351311" expanded="true" signature="3804:3876" ph="SELECT COUNT... product" />
+            <marker date="1540297351311" expanded="true" signature="4681:4733" ph="SELECT `imag... product" />
+            <marker date="1540297351311" expanded="true" signature="5146:5312" ph="UPDATE `prod... " />
+            <marker date="1540297351311" expanded="true" signature="5625:5688" ph="SELECT `date... product" />
+            <marker date="1540297351311" expanded="true" signature="6067:6180" ph="SELECT `titl... product" />
+            <marker date="1540297351311" expanded="true" signature="6511:6581" ph="SELECT COUNT... product" />
+            <marker date="1540297351311" expanded="true" signature="6941:7062" ph="INSERT INTO `comment`... " />
           </folding>
         </state>
       </provider>

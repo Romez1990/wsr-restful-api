@@ -25,8 +25,6 @@ class auth extends base_class {
 				$token = sha1(time() . $login . $password);
 				$id_user = $user->fetch_assoc()['id'];
 				$this->db->query("INSERT INTO `session` (`token`, `id_user`) VALUES ('$token', '$id_user')");
-				// id of session
-				// $this->db->insert_id
 				
 				$response['status code'] = 200;
 				$response['status text'] = 'Successful authorization';
