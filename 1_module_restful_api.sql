@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 23, 2018 at 08:01 AM
+-- Generation Time: Oct 23, 2018 at 09:43 AM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.10
 
@@ -25,6 +25,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `text` varchar(255) NOT NULL,
+  `date_of_creation` varchar(16) NOT NULL,
+  `id_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `author`, `text`, `date_of_creation`, `id_product`) VALUES
+(1, 'author', '', '09:15 23.10.2018', 1),
+(2, 'jmo', 'mp', '09:32 23.10.2018', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `product`
 --
 
@@ -37,6 +59,15 @@ CREATE TABLE `product` (
   `image` varchar(255) DEFAULT NULL,
   `date_of_creation` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `tags`, `image`, `date_of_creation`) VALUES
+(1, '5', '', '', '', 'product_images\\1-1).jpg', '08:35 23.10.2018'),
+(2, '2', '2', '12', '3', 'W:\\domains\\1_Module_RESTful_API\\API\\product_images\\bonus avto.jpg', '08:36 23.10.2018'),
+(3, '4', '4', '4', '4', 'product_images\\спасибо.jpg', '08:46 23.10.2018');
 
 -- --------------------------------------------------------
 
@@ -52,6 +83,12 @@ CREATE TABLE `session` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `product`
@@ -71,10 +108,16 @@ ALTER TABLE `session`
 --
 
 --
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `session`

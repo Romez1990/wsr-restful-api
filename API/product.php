@@ -37,7 +37,7 @@ class product extends database {
 					// If there is no errors
 					if (!$response['status code']) {
 						// Upload image
-						$upload_dir = 'W:\domains\1_Module_RESTful_API\API\product_images';
+						$upload_dir = 'product_images';
 						$upload_path = $upload_dir . '\\' . $image['name'];
 						$result_file = move_uploaded_file($image['tmp_name'], $upload_path);
 						
@@ -55,10 +55,19 @@ class product extends database {
 						}
 					}
 					
-				} elseif (count($_GET) > count($url)) {
+				} else {
 					// GET
 					// View
 					
+					$list = $this->db->query("SELECT `title`, `date_of_creation`, `manufacturer`, `text`, `tags`, `image` FROM `product`");
+					
+					while ($product = $list->fetch_assoc()) {
+						$products[] = $product;
+					}
+					
+					$response['status code'] = 200;
+					$response['status text'] = 'List products';
+					$response['list_products'] = $products;
 				}
 				break;
 			
@@ -103,7 +112,7 @@ class product extends database {
 								$r = $this->db->query("SELECT `image` FROM `product` WHERE `id` = '$url[1]'");
 								$d = $r->fetch_assoc()['image'];
 								unlink($d);
-								$upload_dir = 'W:\domains\1_Module_RESTful_API\API\product_images';
+								$upload_dir = 'product_images';
 								$upload_path = $upload_dir . '\\' . $image['name'];
 								$result_file = move_uploaded_file($image['tmp_name'], $upload_path);
 								
@@ -126,14 +135,50 @@ class product extends database {
 							}
 						}
 						
+					} else {
+						// GET
+						// View one
+						
+						$product = $this->db->query("SELECT `title`, `date_of_creation`, `manufacturer`, `text`, `tags`, `image` FROM `product` WHERE `id` = '$url[1]'")->fetch_assoc();
+						
+						$response['status code'] = 200;
+						$response['status text'] = 'List products';
+						$response['product'] = $product;
 					}
 				}
 				break;
 			
 			case 3:
-				
+				if (is_numeric($url[1]) && $url[2] == 'comment') {
+					$author = $_POST['author'];
+					$text = $_POST['text'];
+					
+					if ($this->db->query("SELECT COUNT(`title`) AS `count` FROM `product` WHERE `id` = '$url[1]'")->fetch_assoc()['count'] === 0) {
+						$response['status code'] = 400;
+						$response['status text'] = 'Creating error';
+						$response['body']['status'] = false;
+						$response['body']['message']['product'] = 'Product not found';
+					}
+					
+					if (empty($response['status code'])) {
+						$now = date('H:i d.m.Y');
+						$result = $this->db->query("INSERT INTO `comment` (`id_product`, `author`, `text`, `date_of_creation`) VALUES ('$url[1]', '$author', '$text', '$now')");
+						
+						if ($result) {
+							$response['status code'] = 201;
+							$response['status text'] = 'Successful creation';
+							$response['body']['status'] = true;
+						}
+					}
+				}
 				break;
 			
+			case 4:
+				if (is_numeric($url[1]) && $url[2] == 'comment' && is_numeric($url[3])) {
+					// DELETE
+					
+				}
+				break;
 		}
 		
 		echo json_encode($response);

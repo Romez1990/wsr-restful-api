@@ -20,12 +20,11 @@ class auth extends database {
 			$response['status_text'] = 'Successful authorization';
 			$response['body']['status'] = true;
 			$response['body']['token'] = $token;
-			
-			echo json_encode($response);
-			
 		} elseif (count($_GET) > count($url)) {
 			// GET
 			
 		}
+		
+		echo json_encode($response);
 	}
 }
