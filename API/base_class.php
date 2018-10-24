@@ -9,6 +9,8 @@ class base_class {
 			die("Connection failed: " . $this->db->connect_error);
 		}
 		
+		$this->db->set_charset('utf8');
+		
 		$this->headers = getallheaders();
 		$this->method = $_SERVER['REQUEST_METHOD'];
 	}

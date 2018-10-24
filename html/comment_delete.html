@@ -5,23 +5,19 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>RESTful API</title>
-	<style>
-		form * {
-			display: block;
-			margin: 20px;
-		}
-	</style>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<form action="../API/product/1/comment/1" method="delete">
-	<button type="submit">Send</button>
-</form>
+	<input type="number" id="product">
+	<input type="number" id="comment">
+	<button type="button" id="submit">Send</button>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+$('#submit').on('click', function () {
 	$.ajax({
-		url: 'API/product/1/comment/1',
+		url: 'API/product/' + $('#product').val() + '/comment/' + $('#comment').val(),
 		method: 'DELETE',
 		headers: {'Authorization': 'dfgv435t'},
 		success: function (result) {
@@ -29,6 +25,7 @@
 			console.log(JSON.parse(result));
 		}
 	});
+});
 </script>
 
 </body>
