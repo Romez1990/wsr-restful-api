@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 23, 2018 at 07:34 PM
+-- Generation Time: Oct 24, 2018 at 08:59 AM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.10
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comment` (
   `id` int(11) NOT NULL,
-  `id_product` varchar(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `author` varchar(255) NOT NULL,
   `text` varchar(255) NOT NULL,
-  `date_of_creation` int(16) NOT NULL
+  `date_of_creation` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -47,17 +47,9 @@ CREATE TABLE `product` (
   `title` varchar(255) NOT NULL,
   `manufacturer` varchar(255) DEFAULT NULL,
   `text` text,
-  `tags` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `date_of_creation` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `tags`, `image`, `date_of_creation`) VALUES
-(1, 'Crap', '1', '1', '1', 'product_images\\space cover.jpg', '19:31 23.10.2018');
 
 -- --------------------------------------------------------
 
@@ -68,15 +60,27 @@ INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `tags`, `image`, `
 CREATE TABLE `session` (
   `id` int(11) NOT NULL,
   `token` varchar(255) NOT NULL,
-  `id_user` int(11) DEFAULT NULL
+  `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `session`
 --
 
-INSERT INTO `session` (`id`, `token`, `id_user`) VALUES
+INSERT INTO `session` (`id`, `token`, `user_id`) VALUES
 (1, '1794d5539ff0c36922d749b848c6bb7d5f2b7364', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tag`
+--
+
+CREATE TABLE `tag` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `tag` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -105,7 +109,8 @@ INSERT INTO `user` (`id`, `login`, `password`) VALUES
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `product`
@@ -118,7 +123,15 @@ ALTER TABLE `product`
 -- Indexes for table `session`
 --
 ALTER TABLE `session`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indexes for table `tag`
+--
+ALTER TABLE `tag`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `user`
@@ -134,19 +147,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tag`
+--
+ALTER TABLE `tag`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`

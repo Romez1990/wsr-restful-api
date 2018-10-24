@@ -14,14 +14,22 @@
 </head>
 <body>
 
-<form action="API/product" method="POST" enctype="multipart/form-data">
-	<input type="text" name="title">
-	<input type="text" name="manufacturer">
-	<textarea name="text" cols="30" rows="10"></textarea>
-	<input type="text" name="tags">
-	<input type="file" name="image"/>
+<form action="../API/product/1/comment/1" method="delete">
 	<button type="submit">Send</button>
 </form>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$.ajax({
+		url: 'API/product/7',
+		method: 'DELETE',
+		headers: {'Authorization': 'dfgv435t'},
+		success: function (result) {
+			console.log(result);
+			console.log(JSON.parse(result));
+		}
+	});
+</script>
 
 </body>
 </html>

@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b12f7723-3268-4847-81b2-861f629d9cfc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43133664-cf1b-425f-a854-09e438de52cf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/43133664-cf1b-425f-a854-09e438de52cf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/comment_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/product_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/1_Module_RESTful_API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/1_Module_RESTful_API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/43133664-cf1b-425f-a854-09e438de52cf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/694524e4-df44-483e-aba4-7c37dea59b27.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/abc080d0-bae5-416e-9ed7-6e578d6ec150.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/abc080d0-bae5-416e-9ed7-6e578d6ec150.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_module_restful_api.sql" beforeDir="false" afterPath="$PROJECT_DIR$/1_module_restful_api.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/product_images/space cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/comment_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/product_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/product_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/product_view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view_one.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/product_view_one.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,21 +56,23 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="1_module_restful_api: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="1_module_restful_api@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="1_module_restful_api: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="tag: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="view_one.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view_one.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/API/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="396">
+              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -68,6 +84,9 @@
       <find>==</find>
       <find>====</find>
       <find>!===</find>
+      <find>json</find>
+      <find>=== 0</find>
+      <find>COUNT</find>
     </findStrings>
     <replaceStrings>
       <replace>===</replace>
@@ -83,11 +102,21 @@
       <list>
         <option value="$PROJECT_DIR$/auth.html" />
         <option value="$PROJECT_DIR$/API/database.php" />
-        <option value="$PROJECT_DIR$/API/index.php" />
         <option value="$PROJECT_DIR$/API/.htaccess" />
         <option value="$PROJECT_DIR$/API/base_class.php" />
+        <option value="$PROJECT_DIR$/API/index.php" />
+        <option value="$PROJECT_DIR$/comment_delete.html" />
+        <option value="$PROJECT_DIR$/product_delete.html" />
         <option value="$PROJECT_DIR$/API/auth.php" />
+        <option value="$PROJECT_DIR$/html/product_create.html" />
         <option value="$PROJECT_DIR$/API/product.php" />
+        <option value="$PROJECT_DIR$/html/auth.html" />
+        <option value="$PROJECT_DIR$/html/product_view_one.html" />
+        <option value="$PROJECT_DIR$/html/comment_add.html" />
+        <option value="$PROJECT_DIR$/html/comment_delete.html" />
+        <option value="$PROJECT_DIR$/html/product_delete.html" />
+        <option value="$PROJECT_DIR$/html/product_edit.html" />
+        <option value="$PROJECT_DIR$/html/product_view.html" />
       </list>
     </option>
   </component>
@@ -103,14 +132,18 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1052" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,19 +156,31 @@
               <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL&#10;Amazon Redshift" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="E:/module1.com" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="last_opened_file_path" value="D:/WorkingFiles/Yandex.Disk/_University/WorldSkills/Examples/1 Module RESTful API/module1.com" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Open Server\domains\1_Module_RESTful_API\html" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Open Server\domains\1_Module_RESTful_API" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -163,11 +208,12 @@
       <workItem from="1540284105295" duration="2784000" />
       <workItem from="1540289712276" duration="6545000" />
       <workItem from="1540310121901" duration="2254000" />
+      <workItem from="1540351033308" duration="9700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11605000" />
+    <option name="totallyTimeSpent" value="21305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -179,29 +225,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32910052" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32769832" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3281075" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1302589" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32769832" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13174807" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.24595469" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.24550128" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32769832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="10" weight="0.32769832" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,8 +255,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/auth.html">
+    <entry file="file://$PROJECT_DIR$/html/product_view_one.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/auth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
@@ -225,13 +285,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/base_class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/API/base_class.php" />
     <entry file="file://$PROJECT_DIR$/API/auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -246,20 +300,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth.html">
+    <entry file="file://$PROJECT_DIR$/html/auth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/base_class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/API/base_class.php" />
     <entry file="file://$PROJECT_DIR$/API/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -284,22 +332,26 @@
     <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.user" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/43133664-cf1b-425f-a854-09e438de52cf/console.sql" />
     <entry file="das://table:/5e4c754d/43133664-cf1b-425f-a854-09e438de52cf/1_module_restful_api.session" />
-    <entry file="das://43133664-cf1b-425f-a854-09e438de52cf/schema/1_module_restful_api/table/comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/617b259c-a507-4923-b31a-13559a48bdd4/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="das://43133664-cf1b-425f-a854-09e438de52cf/schema/1_module_restful_api/table/comment" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/617b259c-a507-4923-b31a-13559a48bdd4/console.sql" />
     <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/abc080d0-bae5-416e-9ed7-6e578d6ec150/console.sql" />
+    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/base_class.php" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/694524e4-df44-483e-aba4-7c37dea59b27/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/session">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -308,51 +360,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/abc080d0-bae5-416e-9ed7-6e578d6ec150/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/comment">
+    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/product">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auth.html">
+    <entry file="file://$PROJECT_DIR$/1_module_restful_api.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        <state relative-caret-position="270">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="90">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/base_class.php">
+    <entry file="file://$PROJECT_DIR$/html/product_view_one.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view_one.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/html/auth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/comment_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/comment_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/product_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/product_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/product_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/product_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="396">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
         </state>
       </provider>
     </entry>
