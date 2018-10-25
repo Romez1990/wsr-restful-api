@@ -18,5 +18,31 @@
 	<button type="submit">Send</button>
 </form>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('button').on('click', (e) => {
+		e.preventDefault();
+		let data = new FormData;
+		data.append('title', $("#f1_title").val());
+		data.append('manufacturer', $("#f1_manufacturer").val());
+		data.append('text', $("#f1_text").val());
+		data.append('tags', $("#f1_tags").val());
+		//data.append('image', $("#f1_image")[0].files[0]);
+		$.ajax({
+			url: "../api/product",
+			method: 'post',
+			data: data,
+			headers: {
+				'Authorization': "1794d5539ff0c36922d749b848c6bb7d5f2b7364"
+			},
+			contentType: false,
+			processData: false,
+			success: function (result) {
+				console.log(JSON.parse(result));
+			}
+		})
+	});
+</script>
+
 </body>
 </html>

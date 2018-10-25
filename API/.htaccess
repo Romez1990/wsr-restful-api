@@ -3,5 +3,5 @@ RewriteEngine on
 RewriteBase /API/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule (.*) /API/index.php?$1 [QSA,L]
+RewriteRule (.*) /API/api2.php?$1 [QSA,L]
 </IfModule>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 25, 2018 at 08:15 AM
+-- Generation Time: Oct 25, 2018 at 09:29 AM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.10
 
@@ -51,13 +51,6 @@ CREATE TABLE `product` (
   `date_of_creation` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `image`, `date_of_creation`) VALUES
-(2, 'Second crap', '45', 'dfgdfgdf', 'product_images\\Wallpaper.jpg', '08:01 25.10.2018');
-
 -- --------------------------------------------------------
 
 --
@@ -70,13 +63,6 @@ CREATE TABLE `session` (
   `user_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `session`
---
-
-INSERT INTO `session` (`id`, `token`, `user_id`) VALUES
-(1, '1794d5539ff0c36922d749b848c6bb7d5f2b7364', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -88,14 +74,6 @@ CREATE TABLE `tag` (
   `product_id` int(11) DEFAULT NULL,
   `tag` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tag`
---
-
-INSERT INTO `tag` (`id`, `product_id`, `tag`) VALUES
-(4, 2, 'bad'),
-(5, 2, 'some');
 
 -- --------------------------------------------------------
 
@@ -162,25 +140,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -202,7 +180,7 @@ ALTER TABLE `comment`
 -- Constraints for table `session`
 --
 ALTER TABLE `session`
-  ADD CONSTRAINT `session_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+  ADD CONSTRAINT `session_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tag`
