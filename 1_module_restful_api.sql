@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Окт 24 2018 г., 19:30
--- Версия сервера: 8.0.12
--- Версия PHP: 7.2.10
+-- Host: 127.0.0.1:3306
+-- Generation Time: Oct 25, 2018 at 08:15 AM
+-- Server version: 8.0.12
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `1_module_restful_api`
+-- Database: `1_module_restful_api`
 --
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -39,7 +39,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -52,16 +52,16 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `image`, `date_of_creation`) VALUES
-(1, '99', '', 'vdsfbv', 'product_images\\Москва.jpg', '18:45 24.10.2018');
+(2, 'Second crap', '45', 'dfgdfgdf', 'product_images\\Wallpaper.jpg', '08:01 25.10.2018');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `session`
+-- Table structure for table `session`
 --
 
 CREATE TABLE `session` (
@@ -71,7 +71,7 @@ CREATE TABLE `session` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `session`
+-- Dumping data for table `session`
 --
 
 INSERT INTO `session` (`id`, `token`, `user_id`) VALUES
@@ -80,7 +80,7 @@ INSERT INTO `session` (`id`, `token`, `user_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `tag`
+-- Table structure for table `tag`
 --
 
 CREATE TABLE `tag` (
@@ -90,18 +90,17 @@ CREATE TABLE `tag` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `tag`
+-- Dumping data for table `tag`
 --
 
 INSERT INTO `tag` (`id`, `product_id`, `tag`) VALUES
-(8, 1, '  dfg'),
-(9, 1, 'ds  fg'),
-(10, 1, 'dsf  ');
+(4, 2, 'bad'),
+(5, 2, 'some');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -111,102 +110,102 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `login`, `password`) VALUES
 (1, 'admin', 'admin');
 
 --
--- Индексы сохранённых таблиц
+-- Indexes for dumped tables
 --
 
 --
--- Индексы таблицы `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Индексы таблицы `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `title` (`title`);
 
 --
--- Индексы таблицы `session`
+-- Indexes for table `session`
 --
 ALTER TABLE `session`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Индексы таблицы `tag`
+-- Indexes for table `tag`
 --
 ALTER TABLE `tag`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
--- Индексы таблицы `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT для сохранённых таблиц
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT для таблицы `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT для таблицы `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `session`
+-- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT для таблицы `tag`
+-- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Ограничения внешнего ключа сохраненных таблиц
+-- Constraints for dumped tables
 --
 
 --
--- Ограничения внешнего ключа таблицы `comment`
+-- Constraints for table `comment`
 --
 ALTER TABLE `comment`
   ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения внешнего ключа таблицы `session`
+-- Constraints for table `session`
 --
 ALTER TABLE `session`
   ADD CONSTRAINT `session_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Ограничения внешнего ключа таблицы `tag`
+-- Constraints for table `tag`
 --
 ALTER TABLE `tag`
   ADD CONSTRAINT `tag_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;

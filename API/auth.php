@@ -33,6 +33,6 @@ class auth extends base_class {
 			}
 		}
 		
-		echo json_encode($response);
+		echo json_encode($response, JSON_UNESCAPED_UNICODE);
 	}
 }

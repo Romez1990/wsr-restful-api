@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="1_module_restful_api@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
+<dataSource name="1_module_restful_api">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.11">
     <root id="1">
       <ServerVersion>8.0.12</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -1149,124 +1149,146 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="289" parent="278" name="id">
+    <foreign-key id="289" parent="277" name="comment_ibfk_1">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>1_module_restful_api</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="290" parent="278" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="278" name="title">
+    <column id="291" parent="278" name="title">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="278" name="manufacturer">
+    <column id="292" parent="278" name="manufacturer">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="278" name="text">
+    <column id="293" parent="278" name="text">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="278" name="image">
+    <column id="294" parent="278" name="image">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="278" name="date_of_creation">
+    <column id="295" parent="278" name="date_of_creation">
       <Position>6</Position>
       <DataType>varchar(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="295" parent="278" name="title">
+    <index id="296" parent="278" name="title">
       <ColNames>title</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="296" parent="278" name="PRIMARY">
+    <key id="297" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="297" parent="278" name="title">
+    <key id="298" parent="278" name="title">
       <ColNames>title</ColNames>
       <UnderlyingIndexName>title</UnderlyingIndexName>
     </key>
-    <column id="298" parent="279" name="id">
+    <column id="299" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="279" name="token">
+    <column id="300" parent="279" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="279" name="user_id">
+    <column id="301" parent="279" name="user_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="301" parent="279" name="user_id">
+    <index id="302" parent="279" name="user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="302" parent="279" name="PRIMARY">
+    <key id="303" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="280" name="id">
+    <foreign-key id="304" parent="279" name="session_ibfk_1">
+      <ColNames>user_id</ColNames>
+      <RefSchemaName>1_module_restful_api</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="305" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="280" name="product_id">
+    <column id="306" parent="280" name="product_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="280" name="tag">
+    <column id="307" parent="280" name="tag">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="306" parent="280" name="product_id">
+    <index id="308" parent="280" name="product_id">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="307" parent="280" name="PRIMARY">
+    <key id="309" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="308" parent="281" name="id">
+    <foreign-key id="310" parent="280" name="tag_ibfk_1">
+      <ColNames>product_id</ColNames>
+      <RefSchemaName>1_module_restful_api</RefSchemaName>
+      <RefTableName>product</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="311" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="281" name="login">
+    <column id="312" parent="281" name="login">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="281" name="password">
+    <column id="313" parent="281" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="281" name="PRIMARY">
+    <key id="314" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
