@@ -32,7 +32,7 @@ class product extends base_class {
 							$response['status code'] = 400;
 							$response['status text'] = 'Creating error';
 							$response['body']['status'] = false;
-							$response['body']['message']['manufacturer'] = 'Empty text';
+							$response['body']['message']['text'] = 'Empty text';
 						}
 						
 						// Check empty manufacturer
