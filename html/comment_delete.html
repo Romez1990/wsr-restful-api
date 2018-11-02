@@ -17,7 +17,7 @@
 <script>
 $('#submit').on('click', function () {
 	$.ajax({
-		url: '../API/product/' + $('#product').val() + '/comment/' + $('#comment').val(),
+		url: '../api/product/' + $('#product').val() + '/comment/' + $('#comment').val(),
 		method: 'DELETE',
 		headers: {'Authorization': 'dfgv435t'},
 		success: function (result) {
