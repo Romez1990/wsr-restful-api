@@ -8,7 +8,7 @@
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
-      <user-name>mysql</user-name>
+      <user-name>root</user-name>
       <introspection-schemas>*:1_module_restful_api</introspection-schemas>
     </data-source>
   </component>

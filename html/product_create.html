@@ -4,36 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>RESTful API</title>
-	<link rel="stylesheet" href="css/style.css">
+	<title>Create product</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<form action="../api/product" method="POST" enctype="multipart/form-data">
-	<input type="text" name="title">
-	<input type="text" name="manufacturer">
+<form>
+	<input type="text" name="title" placeholder="title">
+	<input type="text" name="manufacturer" placeholder="manufacturer">
 	<textarea name="text" cols="30" rows="10"></textarea>
-	<input type="text" name="tags">
+	<input type="text" name="tags" placeholder="tags">
 	<input type="file" name="image"/>
 	<button type="submit">Send</button>
 </form>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$('button').on('click', (e) => {
 		e.preventDefault();
 		let data = new FormData;
-		data.append('title', $("#f1_title").val());
-		data.append('manufacturer', $("#f1_manufacturer").val());
-		data.append('text', $("#f1_text").val());
-		data.append('tags', $("#f1_tags").val());
-		//data.append('image', $("#f1_image")[0].files[0]);
+		data.append('title', $('input[name="title"]').val());
+		data.append('manufacturer', $('input[name="manufacturer"]').val());
+		data.append('text', $('textarea[name="text"]').val());
+		data.append('tags', $('input[name="tags"]').val());
+		data.append('image', $('input[name="image"]')[0].files[0]);
 		$.ajax({
-			url: "../api/product",
+			url: '../api/product',
 			method: 'post',
 			data: data,
 			headers: {
-				'Authorization': "1794d5539ff0c36922d749b848c6bb7d5f2b7364"
+				'Authorization': ''
 			},
 			contentType: false,
 			processData: false,

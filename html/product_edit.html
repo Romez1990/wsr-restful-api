@@ -5,15 +5,45 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>RESTful API</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<form action="../api/product/1" method="POST" enctype="multipart/form-data">
-	<input type="text" name="title">
+<form>
+	<input type="text" name="product_id" placeholder="product_id">
+	<input type="text" name="title" placeholder="title">
+	<input type="text" name="manufacturer" placeholder="manufacturer">
+	<textarea name="text" cols="30" rows="10"></textarea>
+	<input type="text" name="tags" placeholder="tags">
 	<input type="file" name="image"/>
 	<button type="submit">Send</button>
 </form>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('button').on('click', (e) => {
+		e.preventDefault();
+		let data = new FormData;
+		data.append('title', $('input[name="title"]').val());
+		data.append('manufacturer', $('input[name="manufacturer"]').val());
+		data.append('text', $('textarea[name="text"]').val());
+		data.append('tags', $('input[name="tags"]').val());
+		data.append('image', $('input[name="image"]')[0].files[0]);
+		$.ajax({
+			url: '../api/product/' + $('input[name="product_id"]').val(),
+			method: 'post',
+			data: data,
+			headers: {
+				'Authorization': ''
+			},
+			contentType: false,
+			processData: false,
+			success: function (result) {
+				console.log(JSON.parse(result));
+			}
+		})
+	});
+</script>
 
 </body>
 </html>

@@ -1,0 +1,50 @@
+<RestClientRequest>
+  <option name="biscuits">
+    <list />
+  </option>
+  <option name="httpMethod" value="POST" />
+  <option name="urlBase" value="http://module1" />
+  <option name="urlPath" value="/api/product" />
+  <option name="headers">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="Accept" />
+        <option name="value" value="*/*" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Cache-Control" />
+        <option name="value" value="no-cache" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="Authorization" />
+        <option name="value" value="ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parameters">
+    <list>
+      <KeyValuePair>
+        <option name="key" value="title" />
+        <option name="value" value="Crap" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="manufacturer" />
+        <option name="value" value="You" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="text" />
+        <option name="value" value="A lot of text" />
+      </KeyValuePair>
+      <KeyValuePair>
+        <option name="key" value="tags" />
+        <option name="value" value="qwe, 123" />
+      </KeyValuePair>
+    </list>
+  </option>
+  <option name="parametersEnabled" value="true" />
+  <option name="haveTextToSend" value="false" />
+  <option name="haveFileToSend" value="true" />
+  <option name="isFileUpload" value="true" />
+  <option name="textToSend" value="" />
+  <option name="filesToSend" value="C:/OSPanel/domains/module1/debug/product/Desert.jpg" />
+</RestClientRequest>
