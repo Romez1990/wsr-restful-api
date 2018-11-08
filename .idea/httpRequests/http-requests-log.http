@@ -1,0 +1,26 @@
+POST http://module1/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 123
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< /var/www/html/1_Module_RESTful_API/background.jpg
+--null--
+
+###
+
+POST http://module1/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 123
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< /var/www/html/1_Module_RESTful_API/background.jpg
+--null--
+
+###
+
