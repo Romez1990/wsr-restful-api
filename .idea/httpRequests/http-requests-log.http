@@ -1,3 +1,208 @@
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+<> 2018-11-09T094050.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+<> 2018-11-09T094044.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+<> 2018-11-09T093827.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+<> 2018-11-09T093449.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+<> 2018-11-09T093425.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+<> 2018-11-09T093411.200.html
+
+###
+
+POST http://1-module-restful-api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+<> 2018-11-09T093331.200.html
+
+###
+
+POST http://1_module_restful_api/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234, 34
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://module1/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 1234
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://module1/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 123
+Accept: */*
+Cache-Control: no-cache
+Authorization: ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901
+
+--null
+
+
+< D:\Open Server\domains\1_Module_RESTful_API\background.jpg
+--null--
+
+###
+
+POST http://1-module-restful-api/api/auth?login=admin&password=admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-09T092617.200.html
+
+###
+
+POST http://1-module-restful-api/api/auth?login=admin&password=admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-09T092608.200.html
+
+###
+
+POST http://1-module-restful-api/api/auth?login=admin&password=admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-09T092216.200.html
+
+###
+
+POST http://1-module-restful-api/api/auth?login=admin&password=admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-09T084046.200.html
+
+###
+
+POST http://1-module-restful-api/api/auth?login=admin&password=admin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-09T083905.200.html
+
+###
+
 POST http://module1/api/product?title=Crap&manufacturer=You&text=A lot of text&tags=qwe, 123
 Accept: */*
 Cache-Control: no-cache

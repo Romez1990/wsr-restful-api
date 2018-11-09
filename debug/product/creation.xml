@@ -3,7 +3,7 @@
     <list />
   </option>
   <option name="httpMethod" value="POST" />
-  <option name="urlBase" value="http://module1" />
+  <option name="urlBase" value="http://1-module-restful-api" />
   <option name="urlPath" value="/api/product" />
   <option name="headers">
     <list>
@@ -37,7 +37,7 @@
       </KeyValuePair>
       <KeyValuePair>
         <option name="key" value="tags" />
-        <option name="value" value="qwe, 123" />
+        <option name="value" value="qwe, 1234, 34" />
       </KeyValuePair>
     </list>
   </option>
@@ -46,5 +46,5 @@
   <option name="haveFileToSend" value="true" />
   <option name="isFileUpload" value="true" />
   <option name="textToSend" value="" />
-  <option name="filesToSend" value="C:/OSPanel/domains/module1/debug/product/Desert.jpg" />
+  <option name="filesToSend" value="D:/Open Server/domains/1_Module_RESTful_API/background.jpg" />
 </RestClientRequest>

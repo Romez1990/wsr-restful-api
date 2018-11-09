@@ -3,7 +3,7 @@
     <list />
   </option>
   <option name="httpMethod" value="POST" />
-  <option name="urlBase" value="http://module1" />
+  <option name="urlBase" value="http://1-module-restful-api" />
   <option name="urlPath" value="/api/auth" />
   <option name="headers">
     <list>
@@ -34,5 +34,5 @@
   <option name="haveFileToSend" value="false" />
   <option name="isFileUpload" value="false" />
   <option name="textToSend" value="" />
-  <option name="filesToSend" value="" />
+  <option name="filesToSend" value="D:/Open Server/domains/1_Module_RESTful_API/background.jpg" />
 </RestClientRequest>

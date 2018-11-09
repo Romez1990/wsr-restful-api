@@ -15,9 +15,9 @@ switch ($url[0]) {
 
 	case 'product':
 		if ($class->method === 'POST' && count($url) === 1) {
-			$class->creation();
+			$class->create();
 		} elseif ($class->method === 'POST' && count($url) === 2 && is_numeric($url[1])) {
-			$class->editing($url[1]);
+			$class->edit($url[1]);
 		}
 		break;
 }
