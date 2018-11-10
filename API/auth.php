@@ -6,10 +6,7 @@ class auth extends base_class {
 		parent::__construct();
 	}
 	
-	public function auth() {
-		$login = $_POST['login'];
-		$password = $_POST['password'];
-		
+	public function auth($login, $password) {
 		$user = $this->db->query("SELECT `id` FROM `user` WHERE `login` = '$login' AND `password` = '$password'");
 		
 		// Existing check

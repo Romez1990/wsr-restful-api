@@ -17,7 +17,7 @@
       </KeyValuePair>
       <KeyValuePair>
         <option name="key" value="Authorization" />
-        <option name="value" value="ae158d8ad89a1b66ff26072c2aa6dcbdf9efb901" />
+        <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
       </KeyValuePair>
     </list>
   </option>
@@ -43,8 +43,8 @@
   </option>
   <option name="parametersEnabled" value="true" />
   <option name="haveTextToSend" value="false" />
-  <option name="haveFileToSend" value="true" />
-  <option name="isFileUpload" value="true" />
+  <option name="haveFileToSend" value="false" />
+  <option name="isFileUpload" value="false" />
   <option name="textToSend" value="" />
-  <option name="filesToSend" value="D:/Open Server/domains/1_Module_RESTful_API/background.jpg" />
+  <option name="filesToSend" value="D:/Open Server/domains/1_Module_RESTful_API/debug/product/background.jpg" />
 </RestClientRequest>

@@ -7,15 +7,9 @@ class product extends base_class {
 		parent::__construct();
 	}
 	
-	public function create() {
+	public function create($title, $manufacturer, $text, $tags, $image) {
 		// Authorization check
-//		if (!$this->check_authorized()) return;
-		
-		$title = $_POST['title'];
-		$manufacturer = $_POST['manufacturer'];
-		$text = $_POST['text'];
-		$tags = $_POST['tags'];
-		$image = $_FILES['image'];
+		if (!$this->check_authorized()) return;
 		
 		// Existing check
 		if ($this->db->query("SELECT COUNT(*) AS 'count' FROM `product` WHERE `title` = '$title'")->fetch_assoc()['count'] !== '0') {
@@ -30,10 +24,10 @@ class product extends base_class {
 			$errors['manufacturer'] = 'Empty manufacturer';
 		if (empty($text))
 			$errors['text'] = 'Empty text';
-		/*if (empty($image))
+		if (empty($image))
 			$errors['image'] = 'No image';
 		elseif (!(($image['type'] === 'image/jpeg' || $image['type'] === 'image/png') && $image['size'] <= 2 * pow(2, 20)))
-			$errors['image'] = 'Invalid file format';*/
+			$errors['image'] = 'Invalid file format';//*/
 		
 		if (!empty($errors)) {
 			$this->response(400, 'Creating error', false, array('message' => $errors));
@@ -43,14 +37,15 @@ class product extends base_class {
 		// If there is no errors do that needs
 		
 		// Upload image
-		/*$upload_dir = 'product_images';
+		$upload_dir = 'product_images';
 		$upload_path = $upload_dir . '\\' . $title . '_' . $image['name'];
-		move_uploaded_file($image['tmp_name'], $upload_path);*/
+		move_uploaded_file($image['tmp_name'], $upload_path);//*/
 		
 		// Upload data
-//		$upload_path_patched = $this->db->real_escape_string($upload_path);
-		$upload_path_patched = '123 path';
-		$a = $this->db->query("INSERT INTO `product` (`title`, `manufacturer`, `text`, `image`) VALUES ('$title', '$manufacturer', '$text', '$upload_path_patched')");
+		$upload_path_patched = $this->db->real_escape_string($upload_path);
+		//$upload_path_patched = '123 path';
+		$datetime = date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
+		$this->db->query("INSERT INTO `product` (`title`, `manufacturer`, `text`, `image`, `datetime`) VALUES ('$title', '$manufacturer', '$text', '$upload_path_patched', '$datetime')");
 		$product_id = $this->db->insert_id;
 		
 		// Upload tags
@@ -62,15 +57,9 @@ class product extends base_class {
 		$this->response(201, 'Successful creation', true, array('post_id' => $product_id));
 	}
 	
-	public function edit($product_id) {
+	public function edit($product_id, $title, $manufacturer, $text, $tags, $image) {
 		// Authorization check
-//		if (!$this->check_authorized()) return;
-		
-		$title = $_POST['title'];
-		$manufacturer = $_POST['manufacturer'];
-		$text = $_POST['text'];
-		$tags = $_POST['tags'];
-		$image = $_FILES['image'];
+		if (!$this->check_authorized()) return;
 		
 		$product = $this->db->query("SELECT * FROM `product` WHERE `id` = '$product_id'");
 		
@@ -120,9 +109,10 @@ class product extends base_class {
 			$this->db->query("INSERT INTO `tag` (`product_id`, `tag`) VALUES ('$product_id', '$tag')");
 		}
 		
+		$datetime = date('H:i d.m.Y', strtotime($product['datetime']));
 		$this->response(201, 'Successful editing', true, array('post' => array(
 			'title' => $title,
-			'datetime' => $product['datetime'],
+			'datetime' => $datetime,
 			'manufacturer' => $manufacturer,
 			'text' => $text,
 			'tags' => $tags,
@@ -144,14 +134,23 @@ class product extends base_class {
 		$this->response(201, 'Successful deletion', true, null);
 	}
 	
-	public function comment($product_id) {
-		$author = $_POST['author'];
-		$comment = $_POST['comment'];
+	public function comment($product_id, $author, $text) {
+		if ($this->check_authorized(false)) {
+			if ($author === null)
+				$author = 'Admin';
+		} else {
+			if (empty($text))
+				$errors['author'] = 'Empty author';
+		}
+		
+		
 		
 		$this->response(404, 'Product not found', null, array('message' => 'Product not found'));
 		
 		$this->response(400, 'Commenting error', false, array('message' => 'An error'));
 		
+		$datetime = date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
+		$this->db->query("INSERT INTO `comment` (`product_id`, `author`, `text`, `datetime`) VALUE ('$product_id', '$author', '$text', '$datetime')");
 		$this->response(201, 'Successful commenting', true, null);
 	}
 	

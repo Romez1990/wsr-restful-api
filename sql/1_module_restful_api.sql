@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 25, 2018 at 09:29 AM
+-- Generation Time: Nov 10, 2018 at 02:30 PM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.10
 
@@ -30,10 +30,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comment` (
   `id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `author` varchar(255) NOT NULL,
-  `text` varchar(255) NOT NULL,
-  `date_of_creation` varchar(16) NOT NULL
+  `product_id` int(11) DEFAULT NULL,
+  `author` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `text` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `datetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -44,12 +44,20 @@ CREATE TABLE `comment` (
 
 CREATE TABLE `product` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `manufacturer` varchar(255) DEFAULT NULL,
-  `text` text,
-  `image` varchar(255) DEFAULT NULL,
-  `date_of_creation` varchar(16) DEFAULT NULL
+  `title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `manufacturer` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `text` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `datetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `image`, `datetime`) VALUES
+(1, 'Crap', 'You', 'A lot of text', '123 path', '2018-11-09 00:00:00'),
+(2, 'uig', 'ighg', 'oiugoiuygio', '123 path', '2018-11-10 14:28:34');
 
 -- --------------------------------------------------------
 
@@ -59,9 +67,16 @@ CREATE TABLE `product` (
 
 CREATE TABLE `session` (
   `id` int(11) NOT NULL,
-  `token` varchar(255) NOT NULL,
-  `user_id` int(11) DEFAULT NULL
+  `user_id` int(11) DEFAULT NULL,
+  `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_german2_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `session`
+--
+
+INSERT INTO `session` (`id`, `user_id`, `token`) VALUES
+(1, 1, '83d012fc432775a2a221cdb6f3071981dee95f0b');
 
 -- --------------------------------------------------------
 
@@ -72,8 +87,20 @@ CREATE TABLE `session` (
 CREATE TABLE `tag` (
   `id` int(11) NOT NULL,
   `product_id` int(11) DEFAULT NULL,
-  `tag` varchar(255) DEFAULT NULL
+  `tag` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tag`
+--
+
+INSERT INTO `tag` (`id`, `product_id`, `tag`) VALUES
+(1, 1, 'qwe'),
+(2, 1, '1234'),
+(3, 1, '34'),
+(19, 2, 'igo'),
+(20, 2, 'uhisudfh'),
+(21, 2, 'sdojfh');
 
 -- --------------------------------------------------------
 
@@ -83,8 +110,8 @@ CREATE TABLE `tag` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `login` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `login` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -146,19 +173,19 @@ ALTER TABLE `comment`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `session`
 --
 ALTER TABLE `session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `user`

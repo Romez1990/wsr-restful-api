@@ -1,11 +1,13 @@
 <?php
 
+require_once 'config.php';
+
 class base_class {
 	protected $db;
 	public $method;
 	
 	public function __construct() {
-		$this->db = new mysqli('127.0.0.1', 'root', '', 'module1');
+		$this->db = new mysqli(config::$db['host'], config::$db['username'], config::$db['password'], config::$db['dbname']);
 		$this->method = $_SERVER['REQUEST_METHOD'];
 	}
 	
@@ -23,14 +25,18 @@ class base_class {
 		$this->db->close();
 	}
 	
-	protected function check_authorized() {
+	protected function check_authorized($print_response = true) {
 		$token = getallheaders()['Authorization'];
 		if ($this->db->query("SELECT COUNT(*) AS `count` FROM `session` WHERE `token` = '$token'")->fetch_assoc()['count'] === '0') {
-			$this->response(401, 'Unauthorized', null, array('message' => 'Unauthorized'));
+			if ($print_response)
+				$this->response(401, 'Unauthorized', null, array('message' => 'Unauthorized'));
 			return false;
 		} else {
 			return true;
 		}
 	}
 	
+	protected function get_datetime() {
+		return date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
+	}
 }
