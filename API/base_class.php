@@ -11,7 +11,7 @@ class base_class {
 		$this->method = $_SERVER['REQUEST_METHOD'];
 	}
 	
-	protected function response($status_code, $status_text, $status, $body) {
+	protected function response($status_code, $status_text, $status = null, $body = null) {
 		$response['status code'] = $status_code;
 		$response['status text'] = $status_text;
 		if ($body !== null) {

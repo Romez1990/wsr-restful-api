@@ -49,8 +49,10 @@ class product extends base_class {
 		$product_id = $this->db->insert_id;
 		
 		// Upload tags
-		foreach (explode(',', $tags) as $tag) {
+		$tags = explode(',', $tags);
+		foreach ($tags as $tag) {
 			$tag = trim($tag);
+			if ($tag === '') continue;
 			$this->db->query("INSERT INTO `tag` (`tag`, `product_id`) VALUES ('$tag', '$product_id')");
 		}
 		
@@ -104,8 +106,10 @@ class product extends base_class {
 		
 		// Upload tags
 		$this->db->query("DELETE FROM `tag` WHERE `product_id` = '$product_id'");
-		foreach (explode(',', $tags) as $tag) {
+		$tags = explode(',', $tags);
+		foreach ($tags as $tag) {
 			$tag = trim($tag);
+			if ($tag === '') continue;
 			$this->db->query("INSERT INTO `tag` (`product_id`, `tag`) VALUES ('$product_id', '$tag')");
 		}
 		
@@ -130,11 +134,70 @@ class product extends base_class {
 			return;
 		}
 		
+		// If there is no errors do that needs
 		$this->db->query("DELETE FROM `product` WHERE `id` = '$product_id'");
-		$this->response(201, 'Successful deletion', true, null);
+		$this->response(201, 'Successful deletion', true);
+	}
+	
+	public function view() {
+		$products_db = $this->db->query("SELECT `id`, `title`, `datetime`, `manufacturer`, `text`, `image` FROM `product`");
+		
+		while ($product = $products_db->fetch_assoc()) {
+			$product_id = $product['id'];
+			
+			// Find tags
+			$tags_db = $this->db->query("SELECT `tag` FROM `tag` WHERE `product_id` = '$product_id'");
+			while ($tag = $tags_db->fetch_assoc())
+				$tags[] = $tag['tag'];
+			if (isset($tags))
+				$product['tags'] = implode(', ', $tags);
+			
+			// Find comments
+			$comments_db = $this->db->query("SELECT `id` AS 'comment_id', `datetime`, `author`, `text` FROM `comment` WHERE `product_id` = '$product_id'");
+			while ($comment = $comments_db->fetch_assoc())
+				$product['comments'][] = $comment;
+			
+			unset($product['id']);
+			
+			$products[] = $product;
+		}
+		
+		$this->response(200, 'List products', null, isset($products) ? $products : null);
+	}
+	
+	public function view_one($product_id) {
+		$product = $this->db->query("SELECT `title`, `datetime`, `manufacturer`, `text`, `image` FROM `product` WHERE `id` = '$product_id'");
+		
+		if ($product->num_rows === 0) {
+			$this->response(404, 'Product not found', null, array('message' => 'Product not found'));
+			return;
+		}
+		
+		$product = $product->fetch_assoc();
+		
+		// Find tags
+		$tags_db = $this->db->query("SELECT `tag` FROM `tag` WHERE `product_id` = '$product_id'");
+		while ($tag = $tags_db->fetch_assoc())
+			$tags[] = $tag['tag'];
+		if (isset($tags))
+			$product['tags'] = implode(', ', $tags);
+		
+		// Find comments
+		$comments_db = $this->db->query("SELECT `id` AS 'comment_id', `datetime`, `author`, `text` FROM `comment` WHERE `product_id` = '$product_id'");
+		while ($comment = $comments_db->fetch_assoc())
+			$product['comments'][] = $comment;
+		
+		$this->response(200, 'View product', null, $product);
 	}
 	
 	public function comment($product_id, $author, $text) {
+		// Product existing check
+		if ($this->db->query("SELECT COUNT(*) AS 'count' FROM `product` WHERE `id` = '$product_id'")->fetch_assoc()['count'] === '0') {
+			$this->response(404, 'Product not found', null, array('message' => 'Product not found'));
+			return;
+		}
+		
+		// Author check
 		if ($this->check_authorized(false)) {
 			if ($author === null)
 				$author = 'Admin';
@@ -143,18 +206,50 @@ class product extends base_class {
 				$errors['author'] = 'Empty author';
 		}
 		
+		// Text check
+		if (empty($text))
+			$errors['text'] = 'Empty text';
+		elseif (strlen($text) > 255)
+			$errors['text'] = 'Text is too large';
 		
+		if (!empty($errors)) {
+			$this->response(400, 'Commenting error', false, array('message' => $errors));
+			return;
+		}
 		
-		$this->response(404, 'Product not found', null, array('message' => 'Product not found'));
-		
-		$this->response(400, 'Commenting error', false, array('message' => 'An error'));
-		
+		// If there is no errors do that needs
 		$datetime = date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
 		$this->db->query("INSERT INTO `comment` (`product_id`, `author`, `text`, `datetime`) VALUE ('$product_id', '$author', '$text', '$datetime')");
 		$this->response(201, 'Successful commenting', true, null);
 	}
 	
 	public function delete_comment($product_id, $comment_id) {
+		// Authorization check
+		if (!$this->check_authorized()) return;
+		
+		// Product existing check
+		if ($this->db->query("SELECT COUNT(*) AS 'count' FROM `product` WHERE `id` = '$product_id'")->fetch_assoc()['count'] === '0') {
+			$this->response(404, 'Product not found', null, array('message' => 'Product not found'));
+			return;
+		}
+		
+		// Comment existing check
+		if ($this->db->query("SELECT COUNT(*) AS 'count' FROM `comment` WHERE `product_id` = '$product_id' AND `id` = '$comment_id'")->fetch_assoc()['count'] === '0') {
+			$this->response(404, 'Comment not found', null, array('message' => 'Comment not found'));
+			return;
+		}
+		
+		// If there is no errors do that needs
+		$this->db->query("DELETE FROM `comment` WHERE `product_id` = '$product_id' AND `id` = '$comment_id'");
+		$this->response(201, 'Successful deleting', true);
+	}
 	
+	public function search_by_tag($tag) {
+		$this->db->query("SELECT * FROM `tag`");
+		
+		if (!isset($products))
+			$this->response(200, 'Products not found');
+		else
+			$this->response(200, 'Found products', null, $products);
 	}
 }
