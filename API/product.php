@@ -44,12 +44,13 @@ class product extends base_class {
 		// Upload data
 		$upload_path_patched = $this->db->real_escape_string($upload_path);
 		//$upload_path_patched = '123 path';
-		$datetime = date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
+		$datetime = $this->get_datetime();
 		$this->db->query("INSERT INTO `product` (`title`, `manufacturer`, `text`, `image`, `datetime`) VALUES ('$title', '$manufacturer', '$text', '$upload_path_patched', '$datetime')");
 		$product_id = $this->db->insert_id;
 		
 		// Upload tags
 		$tags = explode(',', $tags);
+		$tags = array_unique($tags);
 		foreach ($tags as $tag) {
 			$tag = trim($tag);
 			if ($tag === '') continue;
@@ -107,6 +108,7 @@ class product extends base_class {
 		// Upload tags
 		$this->db->query("DELETE FROM `tag` WHERE `product_id` = '$product_id'");
 		$tags = explode(',', $tags);
+		$tags = array_unique($tags);
 		foreach ($tags as $tag) {
 			$tag = trim($tag);
 			if ($tag === '') continue;
@@ -218,9 +220,9 @@ class product extends base_class {
 		}
 		
 		// If there is no errors do that needs
-		$datetime = date('Y-m-d H:i:s', time() + (config::$server_timezone - config::$timezone) * 60 * 60);
+		$datetime = $this->get_datetime();
 		$this->db->query("INSERT INTO `comment` (`product_id`, `author`, `text`, `datetime`) VALUE ('$product_id', '$author', '$text', '$datetime')");
-		$this->response(201, 'Successful commenting', true, null);
+		$this->response(201, 'Successful commenting', true);
 	}
 	
 	public function delete_comment($product_id, $comment_id) {
@@ -245,11 +247,31 @@ class product extends base_class {
 	}
 	
 	public function search_by_tag($tag) {
-		$this->db->query("SELECT * FROM `tag`");
+		$product_ids_db = $this->db->query("SELECT `product_id` FROM `tag` WHERE `tag` = '$tag'");
+		while ($product_id = $product_ids_db->fetch_assoc())
+			$product_ids[] = $product_id['product_id'];
 		
-		if (!isset($products))
+		if (empty($product_ids)) {
 			$this->response(200, 'Products not found');
-		else
-			$this->response(200, 'Found products', null, $products);
+			return;
+		}
+		
+		foreach ($product_ids as $product_id) {
+			// Find product
+			$product = $this->db->query("SELECT `title`, `datetime`, `manufacturer`, `text`, `image` FROM `product` WHERE `id` = '$product_id'");
+			$product = $product->fetch_assoc();
+			
+			// Find tags
+			$tags_db = $this->db->query("SELECT `tag` FROM `tag` WHERE `product_id` = '$product_id'");
+			while ($tag = $tags_db->fetch_assoc())
+				$tags[] = $tag['tag'];
+			if (isset($tags))
+				$product['tags'] = implode(', ', $tags);
+			
+			$products[] = $product;
+		}
+		
+		/** @noinspection PhpUndefinedVariableInspection */
+		$this->response(200, 'Found products', null, $products);
 	}
 }

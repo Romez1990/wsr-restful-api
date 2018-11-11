@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 10, 2018 at 02:30 PM
+-- Generation Time: Nov 11, 2018 at 02:02 PM
 -- Server version: 8.0.12
 -- PHP Version: 7.2.10
 
@@ -36,6 +36,13 @@ CREATE TABLE `comment` (
   `datetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `product_id`, `author`, `text`, `datetime`) VALUES
+(2, 1, 'You', 'fgehtuentun', '2018-11-11 13:59:04');
+
 -- --------------------------------------------------------
 
 --
@@ -56,7 +63,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `title`, `manufacturer`, `text`, `image`, `datetime`) VALUES
-(1, 'Crap', 'You', 'A lot of text', '123 path', '2018-11-09 00:00:00'),
+(1, 'Crap', 'Russia', 'A lot of text', '123 path', '2018-11-09 00:00:00'),
 (2, 'uig', 'ighg', 'oiugoiuygio', '123 path', '2018-11-10 14:28:34');
 
 -- --------------------------------------------------------
@@ -98,8 +105,8 @@ INSERT INTO `tag` (`id`, `product_id`, `tag`) VALUES
 (1, 1, 'qwe'),
 (2, 1, '1234'),
 (3, 1, '34'),
-(19, 2, 'igo'),
-(20, 2, 'uhisudfh'),
+(19, 2, 'qwe'),
+(20, 2, '12'),
 (21, 2, 'sdojfh');
 
 -- --------------------------------------------------------
@@ -167,7 +174,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `product`

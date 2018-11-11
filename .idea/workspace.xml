@@ -2,25 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b12f7723-3268-4847-81b2-861f629d9cfc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T011149.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T011332.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T011930.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T012016.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024024.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024052.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024053.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024057.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024113.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024119.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024126-1.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024126.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024130.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024140.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024158.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024407.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T024408.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-11-10T122053.200.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/API/product.php" afterDir="false" />
@@ -67,27 +48,29 @@
     <session id="24198994">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="33" />
+          <entry key="cell" value="38" />
           <entry key="css" value="2" />
           <entry key="htaccess" value="121" />
           <entry key="html" value="237" />
           <entry key="js" value="17" />
-          <entry key="php" value="6307" />
+          <entry key="php" value="6778" />
           <entry key="sql" value="14" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -95,15 +78,16 @@
           <entry key="CSS" value="2" />
           <entry key="HTML" value="237" />
           <entry key="JavaScript" value="17" />
-          <entry key="PHP" value="6306" />
+          <entry key="PHP" value="6777" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="SQL" value="1" />
-          <entry key="Scratch" value="47" />
+          <entry key="Scratch" value="52" />
           <entry key="htaccess" value="121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="comment" value="7" />
+          <entry key="comment" value="9" />
           <entry key="css" value="2" />
           <entry key="htaccess" value="6" />
           <entry key="html" value="28" />
@@ -116,14 +100,14 @@
           <entry key="scss" value="2" />
           <entry key="session" value="5" />
           <entry key="sql" value="16" />
-          <entry key="tag" value="10" />
+          <entry key="tag" value="11" />
           <entry key="user" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Database Element" value="44" />
+          <entry key="Database Element" value="47" />
           <entry key="HTML" value="28" />
           <entry key="Image" value="2" />
           <entry key="Ini" value="1" />
@@ -183,8 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+            <state relative-caret-position="182">
+              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -192,23 +176,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/base_class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="201">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="247" column="32" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
+            <state relative-caret-position="147">
+              <caret line="196" selection-start-line="196" selection-end-line="196" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/product">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/tag">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/comment">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -249,6 +251,10 @@
       <find>$product</find>
       <find>=== 0</find>
       <find>/*</find>
+      <find>null</find>
+      <find>$datetime</find>
+      <find>}</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace>===</replace>
@@ -261,7 +267,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response50.txt" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response43.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -298,8 +304,8 @@
         <option value="$PROJECT_DIR$/api/index.php" />
         <option value="$PROJECT_DIR$/API/product_images/.htaccess" />
         <option value="$PROJECT_DIR$/API/base_class.php" />
-        <option value="$PROJECT_DIR$/API/index.php" />
         <option value="$PROJECT_DIR$/API/product.php" />
+        <option value="$PROJECT_DIR$/API/index.php" />
       </list>
     </option>
   </component>
@@ -326,7 +332,7 @@
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -380,12 +386,27 @@
             <path>
               <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
               <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
+              <item name="debug" type="462c0819:PsiDirectoryNode" />
+              <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
               <item name="html" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
               <item name="1_Module_RESTful_API" type="462c0819:PsiDirectoryNode" />
               <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="1_Module_RESTful_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -425,6 +446,186 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/1/comments" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="author" />
+                <option name="value" value="I" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="text" />
+                <option name="value" value="fgehtuentun" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/1/comments/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/1/comments/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="author" />
+                <option name="value" value="I" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="text" />
+                <option name="value" value="fgehtuentun" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/1/comment" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="author" />
+                <option name="value" value="I" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="text" />
+                <option name="value" value="fgehtuentun" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://1-module-restful-api" />
+          <option name="urlPath" value="/api/product/tag/qwe" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Authorization" />
+                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://1-module-restful-api" />
@@ -477,30 +678,6 @@
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://1-module-restful-api" />
           <option name="urlPath" value="/api/product/2" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Authorization" />
-                <option name="value" value="83d012fc432775a2a221cdb6f3071981dee95f0b" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="textToSend" value="" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://1-module-restful-api" />
-          <option name="urlPath" value="/api/product/1" />
           <option name="headers">
             <list>
               <KeyValuePair>
@@ -908,12 +1085,13 @@
       <workItem from="1541687826244" duration="266000" />
       <workItem from="1541688106775" duration="1339000" />
       <workItem from="1541839190282" duration="14643000" />
-      <workItem from="1541919622274" duration="5956000" />
+      <workItem from="1541919622274" duration="6286000" />
+      <workItem from="1541930895732" duration="3179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78327000" />
+    <option name="totallyTimeSpent" value="81836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -925,15 +1103,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="900" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15102828" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15231362" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" weight="0.3290993" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32905483" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40186915" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4012987" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32714844" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -941,10 +1120,10 @@
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.3264192" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32476637" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.36103895" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" weight="0.32678983" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="13" weight="0.32905483" />
-      <window_info anchor="bottom" id="REST Client" order="14" weight="0.44392523" />
+      <window_info anchor="bottom" id="REST Client" order="14" visible="true" weight="0.44285715" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -980,6 +1159,17 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/API/product.php</url>
+          <line>196</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/auth.html" />
@@ -1032,20 +1222,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/y.js" />
-    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/tag">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/user">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1102,13 +1278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1116,31 +1285,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/product_images/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/API/product_images/.htaccess" />
     <entry file="file://$PROJECT_DIR$/API/base_class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="201">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="247" column="32" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
+        <state relative-caret-position="147">
+          <caret line="196" selection-start-line="196" selection-end-line="196" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/product">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/tag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://abc080d0-bae5-416e-9ed7-6e578d6ec150/schema/1_module_restful_api/table/comment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
