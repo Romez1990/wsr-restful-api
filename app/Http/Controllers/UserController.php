@@ -3,77 +3,47 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Session;
 use Illuminate\Http\Request;
 
 class UserController extends Controller {
 	
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function index() {
-		//
+	public function register(Request $request) {
+		$user = new User();
+		$user->login = $request->input('login');
+		$user->password = md5($request->input('password'));
+		
+		if ($user->check_login_exists())
+			return response([ 'status' => false, 'message' => [ 'login' => 'Already exists' ] ])->setStatusCode(400, 'Registration error');
+		
+		$user->save();
+		
+		return response([ 'status' => true ])->setStatusCode(201, 'Successful registration');
 	}
 	
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return \Illuminate\Http\Response
-	 */
-	public function create() {
-		//
-	}
-	
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request $request
-	 * @return \Illuminate\Http\Response
-	 */
-	public function store(Request $request) {
-		//
-	}
-	
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  \App\Models\User $user
-	 * @return \Illuminate\Http\Response
-	 */
-	public function show(User $user) {
-		//
-	}
-	
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  \App\Models\User $user
-	 * @return \Illuminate\Http\Response
-	 */
-	public function edit(User $user) {
-		//
-	}
-	
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request $request
-	 * @param  \App\Models\User $user
-	 * @return \Illuminate\Http\Response
-	 */
-	public function update(Request $request, User $user) {
-		//
-	}
-	
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  \App\Models\User $user
-	 * @return \Illuminate\Http\Response
-	 */
-	public function destroy(User $user) {
-		//
+	public function authorize_(Request $request) {
+		$user = new User();
+		
+		$user->login = $request->input('login');
+		if (!$user->check_login_exists())
+			return response([ 'status' => false, 'message' => [ 'login' => 'Not found' ] ])->setStatusCode(400, 'Authorization error');
+		
+		$user->password = md5($request->input('password'));
+		if (!($user = $user->check_password_right()))
+			return response([ 'status' => false, 'message' => [ 'password' => 'Does not match' ] ])->setStatusCode(400, 'Authorization error');
+		
+		$session = new Session();
+		$session->user_id = $user->id;
+		$session->ip = $request->server('REMOTE_ADDR');
+		$session->user_agent = $request->server('HTTP_USER_AGENT');
+		if ($res = $session->find_session()) {
+			$session = $res;
+		} else {
+			$session->token = md5($user->password . $session->ip . $session->user_agent);
+			$session->save();
+		}
+		
+		return response([ 'status' => true, 'token' => $session->token ])->setStatusCode(200, 'Successful authorization');
 	}
 	
 }
