@@ -26,6 +26,7 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Product whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Product whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
  */
 class Product extends Model {
     /**
@@ -36,4 +37,8 @@ class Product extends Model {
     protected $fillable = [
         'title', 'manufacturer', 'text', 'image',
     ];
+
+    public function tags() {
+        return $this->hasMany(Tag::class);
+    }
 }
