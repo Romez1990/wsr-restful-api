@@ -26,6 +26,7 @@ class ProductController extends Controller {
         'manufacturer' => 'required|max:255',
         'text' => 'required',
         'image' => 'required|mimes:jpeg,png|max:2048',
+        'tags' => '',
     ];
 
     /**
@@ -54,6 +55,16 @@ class ProductController extends Controller {
 
         $product = Product::create($data);
 
+        if (Arr::has($data, 'tags')) {
+            $tags = [];
+            foreach (explode(',', $data['tags']) as $tag) {
+                $trimmed_tag = trim($tag);
+                if (!empty($trimmed_tag))
+                    $tags[] = ['name' => $trimmed_tag];
+            }
+            $product->tags()->createMany($tags);
+        }
+
         return response(['status' => true, 'product_id' => $product->id])
             ->setStatusCode(201, 'Successful creating');
     }
@@ -80,6 +91,7 @@ class ProductController extends Controller {
         'manufacturer' => 'max:255',
         'text' => '',
         'image' => 'mimes:jpeg,png|max:2048',
+        'tags' => '',
     ];
 
     /**
@@ -128,6 +140,17 @@ class ProductController extends Controller {
         }
 
         $product->update($data);
+
+        if (Arr::has($data, 'tags')) {
+            $tags = [];
+            foreach (explode(',', $data['tags']) as $tag) {
+                $trimmed_tag = trim($tag);
+                if (!empty($trimmed_tag))
+                    $tags[] = ['name' => $trimmed_tag];
+            }
+            $product->tags()->delete();
+            $product->tags()->createMany($tags);
+        }
 
         return response(['status' => true, 'product' => new ProductResource($product)])
             ->setStatusCode(200, 'Successful editing');

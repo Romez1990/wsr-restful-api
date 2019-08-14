@@ -20,6 +20,7 @@ class ProductResource extends JsonResource {
             'datetime' => date('H:i d.m.Y', strtotime($this->created_at)),
             'manufacturer' => $this->manufacturer,
             'text' => $this->text,
+            'tags' => TagResource::collection($this->tags),
             'image' => url(Storage::url($this->image)),
         ];
     }

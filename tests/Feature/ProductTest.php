@@ -37,6 +37,7 @@ class ProductTest extends TestCase {
             'title' => $product->title,
             'manufacturer' => $product->manufacturer,
             'text' => $product->text,
+            'tags' => 'tag1, tag2,,,,',
             'image' => UploadedFile::fake()->image('image.jpg', 100, 100),
         ]);
 
@@ -48,6 +49,20 @@ class ProductTest extends TestCase {
             'title' => $product->title,
             'manufacturer' => $product->manufacturer,
             'text' => $product->text,
+        ]);
+
+        $product_id = $response->json('product_id');
+        $this->assertDatabaseHas('tags', [
+            'product_id' => $product_id,
+            'name' => 'tag1',
+        ]);
+        $this->assertDatabaseHas('tags', [
+            'product_id' => $product_id,
+            'name' => 'tag2',
+        ]);
+        $this->assertDatabaseMissing('tags', [
+            'product_id' => $product_id,
+            'name' => '',
         ]);
 
         Storage::disk('public')->assertExists('product_images/'.$product->title.'.jpg');
@@ -203,10 +218,13 @@ class ProductTest extends TestCase {
     public function testEditing() {
         $product = factory(Product::class)->create();
 
+        $tags = $product->tags;
+
         $response = $this->post('/api/product/'.$product->id, [
             'title' => $product->title.'2',
             'manufacturer' => $product->manufacturer.'2',
             'text' => $product->text.'2',
+            'tags' => 'tag3, tag4,,,,',
             'image' => UploadedFile::fake()->image('image.jpg', 100, 100),
         ]);
 
@@ -219,6 +237,25 @@ class ProductTest extends TestCase {
                 'text' => $product->text.'2',
                 'image' => url(Storage::url('product_images/'.$product->title.'2.jpg')),
             ],
+        ]);
+
+        foreach ($tags as $tag) {
+            $this->assertDatabaseHas('tags', [
+                'product_id' => $product->id,
+                'name' => $tag->name,
+            ]);
+        }
+        $this->assertDatabaseHas('tags', [
+            'product_id' => $product->id,
+            'name' => 'tag3',
+        ]);
+        $this->assertDatabaseHas('tags', [
+            'product_id' => $product->id,
+            'name' => 'tag4',
+        ]);
+        $this->assertDatabaseMissing('tags', [
+            'product_id' => $product->id,
+            'name' => '',
         ]);
     }
 
