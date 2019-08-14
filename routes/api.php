@@ -23,4 +23,5 @@ Route::prefix('product')->group(function () {
     Route::get('{product_id}', 'ProductController@show');
     Route::post('{product_id}', 'ProductController@update');
     Route::delete('{product_id}', 'ProductController@destroy');
+    Route::get('tag/{tag_name}', 'ProductController@searchByTag');
 });

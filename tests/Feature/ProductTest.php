@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Product;
+use App\Models\Tag;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -423,5 +424,40 @@ class ProductTest extends TestCase {
 
         $response->assertStatus(404);
         $response->assertExactJson(['message' => 'Product not found.']);
+    }
+
+    /**
+     * Test searching by a tag
+     *
+     * @return void
+     */
+    public function testSearchByTag() {
+        $product1 = factory(Product::class)->create();
+        $tag1 = Tag::create([
+            'product_id' => $product1->id,
+            'name' => 'sometag',
+        ]);
+        $tag1->update(['product_id' => $product1->id]);
+        $product2 = factory(Product::class)->create();
+        $tag2 = Tag::create([
+            'product_id' => $product2->id,
+            'name' => 'sometag',
+        ]);
+
+        $response = $this->get('/api/product/tag/sometag');
+
+        $response->assertStatus(200);
+        $response->assertJson([
+            [
+                'title' => $product1->title,
+                'manufacturer' => $product1->manufacturer,
+                'text' => $product1->text,
+            ],
+            [
+                'title' => $product2->title,
+                'manufacturer' => $product2->manufacturer,
+                'text' => $product2->text,
+            ],
+        ]);
     }
 }

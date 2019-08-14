@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
+use App\Models\Tag;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -174,5 +175,12 @@ class ProductController extends Controller {
 
         return response(['status' => true])
             ->setStatusCode(200, 'Successful deleting');
+    }
+
+    public function searchByTag($tagName) {
+        $product_ids = Tag::whereName($tagName)->get('product_id');
+        $products = Product::find($product_ids);
+        return response(ProductResource::collection($products))
+            ->setStatusCode(200, 'Found product');
     }
 }
