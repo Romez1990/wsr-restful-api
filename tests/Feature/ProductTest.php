@@ -196,6 +196,7 @@ class ProductTest extends TestCase {
             'manufacturer',
             'text',
             'image',
+            'comments' => [],
         ]);
     }
 

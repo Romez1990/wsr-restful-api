@@ -24,4 +24,9 @@ Route::prefix('product')->group(function () {
     Route::post('{product_id}', 'ProductController@update');
     Route::delete('{product_id}', 'ProductController@destroy');
     Route::get('tag/{tag_name}', 'ProductController@searchByTag');
+
+    Route::prefix('{product_id}/comment')->group(function () {
+        Route::post('/', 'CommentController@store');
+        Route::delete('{comment_id}', 'CommentController@destroy');
+    });
 });

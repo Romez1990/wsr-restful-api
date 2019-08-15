@@ -27,6 +27,7 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Product whereUpdatedAt($value)
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tag[] $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Comment[] $comments
  */
 class Product extends Model {
     /**
@@ -40,5 +41,9 @@ class Product extends Model {
 
     public function tags() {
         return $this->hasMany(Tag::class);
+    }
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
     }
 }

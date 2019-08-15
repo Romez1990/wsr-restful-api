@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\ProductResource;
+use App\Http\Resources\ProductWithCommentsResource;
 use App\Models\Product;
 use App\Models\Tag;
 use Illuminate\Support\Arr;
@@ -83,7 +84,7 @@ class ProductController extends Controller {
             return response(['message' => 'Product not found.'])
                 ->setStatusCode(404, 'Product not found');
 
-        return response(new ProductResource($product))
+        return response(new ProductWithCommentsResource($product))
             ->setStatusCode(200, 'View product');
     }
 
