@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder {
         $this->call([
             ProductsTableSeeder::class,
             TagsTableSeeder::class,
+            CommentsTableSeeder::class,
         ]);
     }
 }
